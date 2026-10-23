@@ -9,7 +9,7 @@ export const config = {
   portfolioDownloadName: 'Backend & Web Developer - Mohamed Walaa Portfolio.pdf',
   portfolioFile: '/My-Portfolio/downloads/portfolio.pdf', // e.g. /Mohamed-Walaa-Zain-CV.pdf, placed in public/
   siteUrl: 'https://midowalaa099-commits.github.io/My-Portfolio', // Your public origin after deployment, without trailing slash.
-  ogImage: '/images/mwz-share-v2.png',
+  ogImage: '/images/mwz-share-v3.jpg',
   logo: '/My-Portfolio/assets/favicon.svg',
   portrait: '/My-Portfolio/assets/hero-portrait-700.webp',
   portraitSet: '/My-Portfolio/assets/hero-portrait-400.webp 400w, /My-Portfolio/assets/hero-portrait-700.webp 700w, /My-Portfolio/assets/hero-portrait.webp 1122w',
