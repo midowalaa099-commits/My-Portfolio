@@ -26,7 +26,7 @@
     "stack": "PHP · Laravel · SQL · JavaScript",
     "projects": "See my projects",
     "demo": "Try the safe-retry demo",
-    "photo": "Portrait of Mohamed Walaa Zain seated at a desk beside a laptop.",
+    "photo": "Portrait of Mohamed Walaa Zain seated at a mall café in a white T-shirt.",
     "availability": "Available",
     "proof": [
       {
@@ -632,7 +632,8 @@
     "eyebrow": "05 / NEXT CONVERSATION",
     "title": "Have a role or a project in mind?",
     "text": "Jobs and freelance work are welcome. Remote, hybrid, and on-site work are open for discussion.",
-    "name": "Mohamed Walaa Zain"
+    "name": "Mohamed Walaa Zain",
+    "photoAlt": "Portrait of Mohamed Walaa Zain seated at a desk beside a laptop."
   },
   "footer": "Backend & Web Developer",
   "back": "Back to top",
