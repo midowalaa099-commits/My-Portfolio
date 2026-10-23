@@ -39,15 +39,3 @@
  .identity-portrait img{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;border-radius:0;object-fit:cover}
  .identity-portrait figcaption{position:absolute;inset-inline:0;inset-block-end:0;padding:24px 14px 12px;background:linear-gradient(transparent,rgba(11,16,25,.9));color:#f0f2fa;font-size:14px}
 }
-
-/* The edited café portrait supplies its own natural color grade. */
-.identity-portrait .portrait-touch img{filter:none!important}
-.identity-portrait .portrait-touch::after{background:none}
-.contact-layout{display:grid;grid-template-columns:minmax(240px,340px) minmax(0,1fr);gap:clamp(32px,5vw,76px);align-items:center}
-.contact-portrait{margin:0;overflow:hidden;border:1px solid var(--line);border-radius:6px}
-.contact-portrait img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
-.contact-copy{text-align:start;min-width:0}
-.contact .contact-copy h2{margin-inline:0;max-width:18ch}
-.contact .contact-copy .actions{justify-content:flex-start}
-@media(max-width:800px){.contact-layout{grid-template-columns:1fr;gap:32px}.contact-portrait{width:min(280px,100%);margin-inline:auto}.contact-copy{text-align:center}.contact .contact-copy h2{margin-inline:auto}.contact .contact-copy .actions{justify-content:center}}
-@media(max-width:560px){.contact-portrait{width:220px}}
