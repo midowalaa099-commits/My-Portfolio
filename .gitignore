@@ -6,3 +6,5 @@ dist/
 outputs/
 
 .prerender-build/
+
+public/downloads/* 2.pdf

@@ -4,6 +4,6 @@ import { config } from './config.js';
 export function getProjects(text) {
   return text.projects.items.map(copy => {
     const settings = config.projects[copy.id];
-    return { ...copy, ...settings, caseHref: `/work/${settings.slug}/` };
+    return { ...copy, ...settings, caseHref: `/My-Portfolio/work/${settings.slug}/` };
   });
 }

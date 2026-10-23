@@ -14,7 +14,7 @@ async function writePage(file, lang, page = 'home', noindex = false) {
   const project = getProjects(en).find(p => p.id === page);
   const title = project ? `${project.name} — ${t.contact.name}` : page === '404' ? t.caseStudy.notFound : t.meta.title;
   const description = project ? project.description : t.meta.description;
-  const canonical = project ? origin + project.caseHref : page === '404' ? origin + '/404.html' : origin + `/${lang}/`;
+  const canonical = project ? new URL(project.caseHref, origin).href : page === '404' ? origin + '/404.html' : origin + `/${lang}/`;
   const markup = render(lang, page);
   const newTags = `<link rel="canonical" href="${canonical}"/>${page === 'home' ? languageLinks : ''}<meta property="og:url" content="${canonical}"/><meta property="og:locale" content="${lang === 'ar' ? 'ar_EG' : 'en_US'}"/><meta property="og:locale:alternate" content="${lang === 'ar' ? 'en_US' : 'ar_EG'}"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="${esc(title)}"/><meta name="twitter:description" content="${esc(description)}"/><meta name="twitter:image" content="${origin + config.ogImage}"/>${noindex ? '<meta name="robots" content="noindex, follow"/>' : ''}`;
   let html = template.replace('<html lang="en" dir="ltr">', `<html lang="${lang}" dir="${lang === 'ar' ? 'rtl' : 'ltr'}">`)

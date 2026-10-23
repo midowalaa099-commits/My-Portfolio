@@ -72,12 +72,12 @@
   {
     "originalPath": "/downloads/cv.pdf",
     "deployedPath": "downloads/cv.pdf",
-    "sha256": "6480abb0667c33375aef94c07be295429bb49189eb278c36803a6c952a9de05a"
+    "sha256": "ee196e16809035e66ea46ab1ce7b93db7fd79d438559d65836029657d6a79bdb"
   },
   {
     "originalPath": "/downloads/portfolio.pdf",
     "deployedPath": "downloads/portfolio.pdf",
-    "sha256": "31c6ebd52a61bdd3e8413acee5230b1b3fdb6c2b60083a23b4edb4f62290995b"
+    "sha256": "7f858b1f3ee85f71d2540713e8c15c110374f28bb7cfd47c4a8ecfc21be3935d"
   },
   {
     "originalPath": "/robots.txt",

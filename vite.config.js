@@ -4,7 +4,7 @@ import path from 'node:path';
 import { config } from './src/config.js';
 import en from './src/en.json' with { type: 'json' };
 const escape = value => value.replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-export default defineConfig({ appType: 'mpa', plugins: [{
+export default defineConfig({ base: '/My-Portfolio/', appType: 'mpa', plugins: [{
   name: 'static-not-found',
   configurePreviewServer(server) {
     return () => server.middlewares.use((req, res, next) => {

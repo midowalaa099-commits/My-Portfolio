@@ -373,7 +373,7 @@
           ],
           "permissions": [],
           "diagram": {
-            "image": "/assets/bank-project.webp",
+            "image": "/My-Portfolio/assets/bank-project.webp",
             "imageAlt": "Source-based diagram of the MVP Bank request flow.",
             "imageCaption": "Source-based explanation. This is a diagram, not a screenshot."
           }
@@ -448,7 +448,7 @@
             ]
           ],
           "diagram": {
-            "image": "/assets/order-project.webp",
+            "image": "/My-Portfolio/assets/order-project.webp",
             "imageAlt": "Source-based diagram of Order App roles and order flow.",
             "imageCaption": "Source-based explanation. This is a diagram, not a screenshot."
           }

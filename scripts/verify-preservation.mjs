@@ -9,7 +9,7 @@ for (const entry of baseline) {
 }
 const pages=['work/masr-security/index.html','work/mvp-bank/index.html','work/order-app/index.html','work/batman-cave-ideas/index.html','learning/index.html','404.html','legacy/index.html'];
 for(const page of pages){const html=fs.readFileSync(path.join('dist',page),'utf8');if(!html.includes('<h1'))throw new Error('Missing preserved page content: '+page);}
-for(const [key,href] of [['cvFile','/downloads/cv.pdf'],['portfolioFile','/downloads/portfolio.pdf']]) {
+for(const [key,href] of [['cvFile','/My-Portfolio/downloads/cv.pdf'],['portfolioFile','/My-Portfolio/downloads/portfolio.pdf']]) {
  const {config}=await import('../src/config.js'); if(config[key]!==href)throw new Error(key+' points to the wrong file');
 }
 console.log(`Preserved ${baseline.length} public assets at their approved baseline hashes, plus all 7 legacy HTML pages. Both PDF paths are configured.`);
