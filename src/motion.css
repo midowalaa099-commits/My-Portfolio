@@ -91,3 +91,7 @@
 .proof-item>strong{inline-size:4ch;min-inline-size:4ch;flex:0 0 4ch}
 .proof-item [data-proof-count]{inline-size:100%;min-inline-size:0}
 .portrait-touch:focus-visible{outline:3px solid var(--accent);outline-offset:-6px}
+
+/* Show the selected hero photo in its original colors, without tinted overlays. */
+.identity-portrait .portrait-touch img{filter:none!important}
+.identity-portrait .portrait-touch::after,.identity-portrait::after{display:none}
