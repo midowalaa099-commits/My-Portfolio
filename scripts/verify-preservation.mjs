@@ -12,4 +12,4 @@ for(const page of pages){const html=fs.readFileSync(path.join('dist',page),'utf8
 for(const [key,href] of [['cvFile','/downloads/cv.pdf'],['portfolioFile','/downloads/portfolio.pdf']]) {
  const {config}=await import('../src/config.js'); if(config[key]!==href)throw new Error(key+' points to the wrong file');
 }
-console.log(`Preserved ${baseline.length} original public files byte for byte, plus all 7 legacy HTML pages. Both PDF paths are configured.`);
+console.log(`Preserved ${baseline.length} public assets at their approved baseline hashes, plus all 7 legacy HTML pages. Both PDF paths are configured.`);
