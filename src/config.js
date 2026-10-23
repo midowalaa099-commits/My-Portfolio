@@ -11,8 +11,8 @@ export const config = {
   siteUrl: 'https://midowalaa099-commits.github.io/My-Portfolio', // Your public origin after deployment, without trailing slash.
   ogImage: '/images/mwz-share-v3.jpg',
   logo: '/My-Portfolio/assets/favicon.svg',
-  portrait: '/My-Portfolio/assets/hero-portrait-700.webp',
-  portraitSet: '/My-Portfolio/assets/hero-portrait-400.webp 400w, /My-Portfolio/assets/hero-portrait-700.webp 700w, /My-Portfolio/assets/hero-portrait.webp 1122w',
+  portrait: '/My-Portfolio/assets/hero-selected-v2-700.webp',
+  portraitSet: '/My-Portfolio/assets/hero-selected-v2-400.webp 400w, /My-Portfolio/assets/hero-selected-v2-700.webp 700w, /My-Portfolio/assets/hero-selected-v2-1122.webp 1122w',
   aboutPortrait: '/My-Portfolio/assets/about-portrait-700.webp',
   aboutPortraitSet: '/My-Portfolio/assets/about-portrait-400.webp 400w, /My-Portfolio/assets/about-portrait-700.webp 700w, /My-Portfolio/assets/about-portrait.webp 1122w',
   learningSource: 'https://laracasts.com',
