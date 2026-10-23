@@ -1,0 +1,97 @@
+[
+  {
+    "originalPath": "/assets/about-portrait-400.webp",
+    "deployedPath": "assets/about-portrait-400.webp",
+    "sha256": "ebdfdab77db1c7c33fb2ba8f168f4071ca5a8da61c56f822391bf940f3870700"
+  },
+  {
+    "originalPath": "/assets/about-portrait-700.webp",
+    "deployedPath": "assets/about-portrait-700.webp",
+    "sha256": "9bc2948cea8f599d2ab3169c1872088cdc1d947a11e3f763367fd42ea3dd97ad"
+  },
+  {
+    "originalPath": "/assets/about-portrait.webp",
+    "deployedPath": "assets/about-portrait.webp",
+    "sha256": "a2b2364752f16a06c1edeafe31c2fe12de49c9654a280a57c10bfb53f2e701fb"
+  },
+  {
+    "originalPath": "/assets/bank-project.svg",
+    "deployedPath": "assets/bank-project.svg",
+    "sha256": "aee968c874b7317d8b2d2ea9c36a95a4c20f8d42a9fe6b07e9810b02acc752a9"
+  },
+  {
+    "originalPath": "/assets/bank-project.webp",
+    "deployedPath": "assets/bank-project.webp",
+    "sha256": "9db478056ca21d64adb79a3823299971bc95963f1ee7b13376b9eb6ddf2a10af"
+  },
+  {
+    "originalPath": "/assets/bank-signin-screen.webp",
+    "deployedPath": "assets/bank-signin-screen.webp",
+    "sha256": "0b01b486e6bb3a788e8e5502a2bdb69664bb038e2302277c87b00afdad52da46"
+  },
+  {
+    "originalPath": "/assets/favicon.svg",
+    "deployedPath": "assets/favicon.svg",
+    "sha256": "f58439b0a64f1e42cb03f338ab46aadafec73cf4424b4cbeef2bcfe39fe9337e"
+  },
+  {
+    "originalPath": "/assets/hero-portrait-400.webp",
+    "deployedPath": "assets/hero-portrait-400.webp",
+    "sha256": "ed96cd5b06f0aad4868626ba2677d0eb9f2e948bf89a4d50b68f5c334e1905fd"
+  },
+  {
+    "originalPath": "/assets/hero-portrait-700.webp",
+    "deployedPath": "assets/hero-portrait-700.webp",
+    "sha256": "bdec686a30f47f994492c55a21244d90f43620cdc54b21241adc2d49e9d323df"
+  },
+  {
+    "originalPath": "/assets/hero-portrait.webp",
+    "deployedPath": "assets/hero-portrait.webp",
+    "sha256": "5ff1d4569c12e8723f16b0915423ac8b1c5ca1a0d612e5caa325014aa5cba3ba"
+  },
+  {
+    "originalPath": "/assets/masr-project.webp",
+    "deployedPath": "assets/masr-project.webp",
+    "sha256": "d29471bf41394bb9975fde1e60c69d1eb585a52e37499640ef4c567ebbf95268"
+  },
+  {
+    "originalPath": "/assets/order-project.svg",
+    "deployedPath": "assets/order-project.svg",
+    "sha256": "911c0cc9527194c96b30016792f2b1a1b9fdf62caa41c7bb41cbfb00d8dce4d1"
+  },
+  {
+    "originalPath": "/assets/order-project.webp",
+    "deployedPath": "assets/order-project.webp",
+    "sha256": "c35fa0154219894fa94078ec60dba3308dba5ecbe0dea8ced77fd7698414ac5e"
+  },
+  {
+    "originalPath": "/assets/order-signin-screen.webp",
+    "deployedPath": "assets/order-signin-screen.webp",
+    "sha256": "40086f0c0b62389bff8993391eddda03afc7cbf27b42e458642f22b8c84366ec"
+  },
+  {
+    "originalPath": "/downloads/cv.pdf",
+    "deployedPath": "downloads/cv.pdf",
+    "sha256": "6480abb0667c33375aef94c07be295429bb49189eb278c36803a6c952a9de05a"
+  },
+  {
+    "originalPath": "/downloads/portfolio.pdf",
+    "deployedPath": "downloads/portfolio.pdf",
+    "sha256": "31c6ebd52a61bdd3e8413acee5230b1b3fdb6c2b60083a23b4edb4f62290995b"
+  },
+  {
+    "originalPath": "/robots.txt",
+    "deployedPath": "legacy/robots.txt",
+    "sha256": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1"
+  },
+  {
+    "originalPath": "/assets/index-DRvv7YpJ.js",
+    "deployedPath": "assets/index-DRvv7YpJ.js",
+    "sha256": "ab485daed05a5107b57abc471ef0c6357d689726969c990490072056115712d0"
+  },
+  {
+    "originalPath": "/assets/index-xYaQQBhk.css",
+    "deployedPath": "assets/index-xYaQQBhk.css",
+    "sha256": "4c0296092358df670d780ce6032b7b9664261e9852136f60bcd558e346ddb686"
+  }
+]

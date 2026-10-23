@@ -1,0 +1,35 @@
+/* Functional copy is body text. Small type is reserved for captions/metadata. */
+body{font-size:16px}
+a,button,summary{min-inline-size:44px;min-block-size:44px}
+a,button{touch-action:manipulation}
+a{display:inline-flex;align-items:center}
+.language,.navigation a,.text-link,.footer a{display:inline-flex;align-items:center;min-block-size:44px}
+.language{justify-content:center;text-decoration:none}
+.menu-button{min-inline-size:44px;min-block-size:44px}
+.button,.button.compact,.identity-hero .actions .button{min-block-size:44px;font-size:16px}
+.project-details summary{padding-block:10px;min-block-size:44px}
+.project-links{flex-wrap:wrap;gap:12px 22px}
+.project-description,.project-details p,.project-details li,.order-flow p,.order-flow li,.demo .status,.education p,.profile-intro .profile-location,.identity-stack,.identity-hero .availability,.proof p,.working-method p,.skill ul,.faq-list p,.contact p:not(.eyebrow),.footer p{font-size:16px}
+.footer a,.courses a,.reset,.navigation,.language{font-size:16px}
+.order-flow li{padding:8px}
+.browser figcaption,.identity-portrait figcaption,.proof small,.protected,.results-note,.eyebrow,.tag,.project-kind{font-size:14px}
+.case-study{max-width:1000px;padding-block:36px 64px}
+.case-study h1{font-size:clamp(38px,6vw,70px);line-height:1.15;letter-spacing:-1.5px;margin-block:22px}
+.case-study p,.case-study li{font-size:16px;line-height:1.85;color:var(--muted)}
+.case-study .case-lead{font-size:22px;color:var(--text)}
+.case-study header{padding-block:24px}
+.case-study .browser{margin-block:32px;border:1px solid var(--line);border-radius:5px;overflow:hidden}
+.case-study section{padding-block:28px;border-block-end:1px solid var(--line)}
+.case-study h2{font-size:30px;line-height:1.3;margin-block:0 22px}
+.case-study h3{font-size:21px;line-height:1.4;margin-block:26px 12px}
+.case-study .project-links{margin-block-start:24px}
+.case-study .demo{margin-block:32px}
+.case-study .case-evidence{margin-block:22px}
+.case-study li{margin-block:10px}
+@media(max-width:1100px){.nav{gap:20px}.navigation{gap:14px}.nav-actions{gap:12px}}
+@media(max-width:560px){.nav{gap:10px}.nav-actions{gap:8px}.identity-hero .actions .button{font-size:16px}.demo .status{font-size:16px}.footer-links{gap:4px 18px;display:flex;flex-wrap:wrap}.case-study h1{overflow-wrap:anywhere}}
+
+.protected{font-size:16px}
+.case-study dt{font-size:18px;font-weight:600;margin-block-start:22px}
+.case-study dd{font-size:16px;line-height:1.85;color:var(--muted);margin-inline-start:0}
+.text-link,.project-details summary,.demo-controls .button,.balance-label,.storage,.bar-label,.demo-badge,.education h3{font-size:16px}

@@ -1,0 +1,2 @@
+import React from 'react';
+export default function Faq({t}){return <section className="section wrap faq-layout" id="faq" aria-labelledby="faq-title"><div><p className="eyebrow">{t.faq.eyebrow}</p><h2 id="faq-title">{t.faq.title}</h2></div><div className="faq-list">{t.faq.items.filter(item=>item.answer.trim()).map(item=><details key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>)}</div></section>}

@@ -1,0 +1,656 @@
+{
+  "meta": {
+    "title": "Mohamed Walaa Zain — Backend & Web Developer",
+    "description": "PHP, Laravel, SQL and JavaScript projects by Mohamed Walaa Zain. Explore a bilingual storefront, simulated banking and a food-ordering API."
+  },
+  "skip": "Skip to content",
+  "menu": "Menu",
+  "close": "Close menu",
+  "language": "العربية",
+  "languageLabel": "Switch to Arabic",
+  "email": "Email me",
+  "cv": "Download CV",
+  "github": "GitHub",
+  "linkedin": "LinkedIn",
+  "whatsapp": "WhatsApp",
+  "nav": [
+    "Projects",
+    "Results",
+    "Skills",
+    "FAQ",
+    "Contact"
+  ],
+  "hero": {
+    "eyebrow": "MOHAMED WALAA ZAIN / BACKEND & WEB DEVELOPER",
+    "title": "I build web apps that handle money and orders without surprises.",
+    "stack": "PHP · Laravel · SQL · JavaScript",
+    "projects": "See my projects",
+    "demo": "Try the safe-retry demo",
+    "photo": "Portrait of Mohamed Walaa Zain seated at a desk beside a laptop.",
+    "availability": "Available",
+    "proof": [
+      {
+        "value": "43%",
+        "text": "faster MASR homepage",
+        "note": "mobile lab median, 5 Oct 2026"
+      },
+      {
+        "value": "154",
+        "text": "backend tests",
+        "note": "MVP Bank, saved run 17 Oct 2026"
+      },
+      {
+        "value": "205",
+        "text": "catalog rows cleaned",
+        "note": "MASR, 4 Oct 2026"
+      }
+    ],
+    "photoCaption": "MOHAMED WALAA ZAIN / BACKEND & WEB DEVELOPER",
+    "nameLines": [
+      "Mohamed",
+      "Walaa Zain"
+    ]
+  },
+  "projects": {
+    "eyebrow": "01 / SELECTED WORK",
+    "title": "Projects, with the details.",
+    "intro": "A client storefront, a simulated bank, an ordering API, and where I started.",
+    "details": "Project details",
+    "live": "Visit storefront",
+    "demo": "Open demo",
+    "protected": "Vercel sign-in required",
+    "source": "View source",
+    "items": [
+      {
+        "id": "masr",
+        "name": "MASR Security",
+        "kind": "CLIENT PROJECT",
+        "description": "An Arabic and English store for security products, delivered to a client.",
+        "tags": [
+          "Laravel",
+          "E-commerce",
+          "Arabic / English"
+        ],
+        "imageLabel": "Storefront screenshot",
+        "alt": "MASR storefront homepage with navigation, a security-products hero, and category cards.",
+        "detail": "I developed the application independently from requirements provided by its manager. The store includes catalogs, carts, checkout, accounts, quote requests, and an admin panel.",
+        "facts": [
+          "Server-side totals, transactions, and row locks coordinate orders and inventory.",
+          "Paymob integration verified in sandbox only. No live payment-volume claim.",
+          "Spreadsheet reconciliation and bulk catalog tools support daily administration."
+        ],
+        "caseStudy": {
+          "role": "I worked independently on development. I implemented requirements given by the manager.",
+          "changes": [
+            "Built the Arabic and English storefront, cart, checkout, and account pages.",
+            "Added catalog tools, bulk pricing, previews, and undo rules.",
+            "Calculated totals on the server. Stock and orders change together.",
+            "Integrated Paymob and verified payment outcomes in sandbox only.",
+            "Reduced image and page work, then measured loading again."
+          ],
+          "results": [
+            "Homepage LCP: 3.161 to 1.813 seconds. About 43% faster.",
+            "Shop LCP: 2.262 to 1.658 seconds. About 27% faster.",
+            "Storefront CSS: about 52% smaller before compression.",
+            "Catalog: 205 rows reconciled, 107 unused products removed, 6 referenced components kept."
+          ],
+          "decisions": [
+            {
+              "title": "Keep prices on the server",
+              "choice": "The server checks prices and changes stock with the order.",
+              "tradeoff": "This needs more coordination. It keeps related changes together.",
+              "explanation": "Related changes happen together or do not happen at all."
+            },
+            {
+              "title": "Preview large price changes",
+              "choice": "Show a preview. Save the old values. Skip later edits during undo.",
+              "tradeoff": "This adds stored history and a review step. It avoids overwriting later work.",
+              "explanation": "Review a bulk change before applying it."
+            },
+            {
+              "title": "Send images that fit the screen",
+              "choice": "Keep originals. Generate WebP sizes. Separate shop and dashboard styling.",
+              "tradeoff": "More files need storage. Each visitor can load a better-sized image.",
+              "explanation": "An image format that can use less data."
+            }
+          ],
+          "limitations": [
+            "Mobile lab measurements: 5 October 2026. Conditions appear beside each result.",
+            "Paymob is integrated and verified in sandbox only. No payment-volume claim."
+          ],
+          "evidence": [
+            {
+              "id": "home-lcp",
+              "value": "43%",
+              "label": "Faster homepage loading",
+              "before": "3.161 s",
+              "after": "1.813 s",
+              "unit": "Largest Contentful Paint",
+              "context": "MASR Security · mobile lab audits · 5 October 2026",
+              "detail": "I improved image delivery, separated storefront assets, and reduced unnecessary page work. Median mobile LCP fell by approximately 43% across three successful before and three after audits. The slower third after run was retained. These are historical lab measurements, not a guarantee for every device or visit.",
+              "date": "2026-10-05",
+              "changed": "I reduced image size and page work. The main content appeared sooner.",
+              "explanation": "How long the main visible content takes to appear.",
+              "method": "Three successful before runs and three after runs. Compare the middle LCP values.",
+              "limits": "The slower after run was kept. Saved mobile lab tests, not results for every visitor.",
+              "beforeNumber": 3.161,
+              "afterNumber": 1.813,
+              "chartUnit": "seconds",
+              "summary": "The main homepage content appeared sooner."
+            },
+            {
+              "id": "shop-lcp",
+              "value": "27%",
+              "label": "Faster shop loading",
+              "before": "2.262 s",
+              "after": "1.658 s",
+              "unit": "Largest Contentful Paint",
+              "context": "MASR Security · mobile lab audits · 5 October 2026",
+              "detail": "The shop used the same image and storefront delivery improvements. LCP fell approximately 27%. The baseline median uses two successful audits because a third failed; the after median uses three. Values are rounded for display and describe the tested release.",
+              "date": "2026-10-05",
+              "changed": "I improved the same image and page delivery used by the shop.",
+              "explanation": "How long the main visible content takes to appear.",
+              "method": "Two successful before runs and three after runs. Compare the middle LCP values.",
+              "limits": "A third before run failed. Saved mobile lab tests; values are rounded.",
+              "beforeNumber": 2.262,
+              "afterNumber": 1.658,
+              "chartUnit": "seconds"
+            },
+            {
+              "id": "lighthouse",
+              "value": "92 → 99",
+              "label": "Higher mobile lab scores",
+              "before": "Home 92 · shop 98",
+              "after": "Home 99 · shop 100",
+              "unit": "Performance score out of 100",
+              "context": "MASR Security · historical mobile lab medians · 5 October 2026",
+              "detail": "Homepage performance moved from 92 to 99, and the shop from 98 to 100. Homepage medians use three successful runs per release; the shop baseline uses two and the after uses three. One after homepage score was 87 and remained in the median. Lab scores vary with conditions and are not real-user field data.",
+              "date": "2026-10-05",
+              "changed": "I checked the same pages before and after the delivery changes.",
+              "explanation": "A browser tool that checks a page in a lab test.",
+              "method": "Middle mobile scores. Home: three before and three after. Shop: two before and three after.",
+              "limits": "An after homepage score of 87 was kept. Lab scores vary. These are not real-user measurements."
+            },
+            {
+              "id": "css",
+              "value": "52%",
+              "label": "Smaller page styling",
+              "before": "≈120 KB",
+              "after": "≈58 KB",
+              "unit": "Uncompressed CSS",
+              "context": "MASR Security · build asset comparison · 5 October 2026",
+              "detail": "Separating storefront and dashboard assets reduced the storefront CSS from approximately 119,910 to 57,940 bytes, a 51.7% reduction rounded to 52%. These are uncompressed bundle sizes. The recorded compressed sizes were approximately 20,190 and 10,680 bytes.",
+              "date": "2026-10-05",
+              "changed": "I separated storefront styling from dashboard styling.",
+              "explanation": "The rules that style a web page.",
+              "method": "Compare uncompressed build files: 119,910 bytes and 57,940 bytes.",
+              "limits": "The reduction is 51.7%, rounded to about 52%. This is file size before compression.",
+              "beforeNumber": 119910,
+              "afterNumber": 57940,
+              "chartUnit": "bytes"
+            },
+            {
+              "id": "images",
+              "value": "787",
+              "label": "Better-sized images",
+              "before": "191 original images",
+              "after": "787 WebP variants",
+              "unit": "Generated image assets",
+              "context": "MASR Security · media generation report · 5 October 2026",
+              "detail": "I preserved 191 source images and generated 787 WebP variants at appropriate widths. Responsive image markup lets the browser choose a suitable size. The count describes generated assets; it does not mean that all variants are transferred to a visitor.",
+              "date": "2026-10-05",
+              "changed": "I kept the originals and made smaller versions for different screens.",
+              "explanation": "An image format that can use less data.",
+              "method": "Count the media generation report: 191 originals and 787 WebP versions.",
+              "limits": "These are generated files. A visitor does not download every version.",
+              "beforeLabel": "Originals",
+              "afterLabel": "Generated versions"
+            },
+            {
+              "id": "queries",
+              "value": "11 → 8",
+              "label": "Less database work",
+              "before": "Homepage 11 · dashboard 5",
+              "after": "Homepage 8 · dashboard 0",
+              "unit": "Database queries per measured request",
+              "context": "MASR Security · earlier catalog optimization benchmark",
+              "detail": "The saved before/after catalog benchmark records 11 to 8 queries for the homepage with application caches cleared, and 5 to 0 for a warm dashboard. Each configuration used five isolated PHPUnit samples with SQLite fixtures. The benchmark is undated and precedes the final 5 October performance report; it does not represent network latency, infrastructure cold starts, or the current release's query count.",
+              "date": "Historical benchmark · date not recorded",
+              "changed": "I reduced repeated data requests and reused saved results.",
+              "explanation": "Requests that ask the database for data.",
+              "method": "Five isolated samples for each setup. PHPUnit tests used SQLite data. Home caches cleared; dashboard cache warm.",
+              "limits": "The source has no date. This earlier benchmark is separate from the 5 October report. It does not measure current production requests."
+            },
+            {
+              "id": "catalog",
+              "value": "205",
+              "label": "A cleaner product catalog",
+              "before": "205 spreadsheet rows",
+              "after": "107 products removed · 6 components retained",
+              "unit": "Catalog reconciliation",
+              "context": "MASR Security · catalog release verification · 4 October 2026",
+              "detail": "I reconciled 205 spreadsheet rows against the catalog. The release verification records 107 removed products and six hidden components retained because they were still referenced. Existing retained product and package configuration was preserved. Spreadsheet rows and product records are different units, so the figures are not a simple subtraction.",
+              "date": "2026-10-04",
+              "changed": "I matched spreadsheet rows with product records. Referenced parts were kept.",
+              "explanation": "Match each spreadsheet row with the right catalog record.",
+              "method": "Read the release verification and compare it with the catalog reconciliation report.",
+              "limits": "Spreadsheet rows and products are different units. Do not subtract these figures from each other.",
+              "beforeLabel": "Rows reviewed",
+              "afterLabel": "Catalog changes",
+              "summary": "I matched catalog rows and kept referenced parts."
+            },
+            {
+              "id": "frontend-tests",
+              "value": "64",
+              "label": "Browser logic checked",
+              "before": "MVP Bank 49",
+              "after": "MASR Security 15",
+              "unit": "Passing JavaScript tests",
+              "context": "Local logic tests · 20 October 2026",
+              "detail": "All 49 MVP Bank frontend logic tests and all 15 MASR JavaScript tests passed during portfolio preparation. They cover exact money formatting, uncertain-request recovery, request-key reuse, stale-response protection, navigation, and admin catalog interactions. They are executable logic tests; they do not substitute for complete browser or production testing.",
+              "date": "2026-10-20",
+              "changed": "I checked money display, request recovery, navigation, and catalog actions.",
+              "explanation": "Automated checks for the JavaScript rules used by the screens.",
+              "method": "Run the existing project JavaScript logic tests: MVP Bank 49, MASR 15.",
+              "limits": "All 49 MVP Bank and 15 MASR logic tests passed again on 20 October 2026. Logic checks do not replace a full browser or production test.",
+              "beforeLabel": "MVP Bank",
+              "afterLabel": "MASR Security"
+            }
+          ],
+          "permissions": []
+        }
+      },
+      {
+        "id": "bank",
+        "name": "MVP Bank",
+        "kind": "SIMULATED BANKING",
+        "description": "A simulated bank built around exact amounts and safe retries.",
+        "tags": [
+          "Laravel",
+          "Integer amounts",
+          "Safe retries"
+        ],
+        "imageLabel": "MVP Bank sign-in screenshot",
+        "alt": "MVP Bank sign-in screen with empty email and password fields and a simulated-money notice.",
+        "detail": "This simulated application holds no real deposits. Amounts use integer minor units. Successful receipts are stored with customer-scoped request keys and checked on replay.",
+        "facts": [
+          "154 backend tests in the saved run on 17 Oct 2026; the historical suite has not been rerun here.",
+          "The hosted demo requires sign-in. The local walkthrough below uses fictional money."
+        ],
+        "caseStudy": {
+          "role": "I built the project, its money rules, access rules, and request recovery. I wrote checks for the API and browser logic.",
+          "changes": [
+            "Built 17 documented API operations for accounts, money, history, and admin controls.",
+            "Stored money as whole numbers in minor units.",
+            "Changed balances and history together. Locked accounts in a fixed order.",
+            "Used request keys to return the first result when a request is repeated.",
+            "Kept uncertain requests available for recovery after a lost response or reload."
+          ],
+          "results": [
+            "154 backend tests and 615 assertions in saved verification.",
+            "7 concurrency and locking scenarios in the saved audit.",
+            "17 documented API operations.",
+            "49 frontend tests passed again on 20 October 2026."
+          ],
+          "decisions": [
+            {
+              "title": "Store exact amounts",
+              "choice": "Store amounts as whole piastres, so EGP 1 is stored as 100.",
+              "tradeoff": "Input rules are stricter. Money avoids decimal rounding errors.",
+              "explanation": "Store EGP 1 as 100 piastres, using whole numbers."
+            },
+            {
+              "title": "Make retries safe",
+              "choice": "Keep the first receipt with its request key. A retry gets the same result.",
+              "tradeoff": "The browser must keep the key. A retry cannot debit the account again.",
+              "explanation": "The same request can return the first result without repeating the change."
+            },
+            {
+              "title": "Lock accounts in a fixed order",
+              "choice": "Make overlapping money changes wait their turn. Save balances with history.",
+              "tradeoff": "Some requests wait. The rules are easier to test and follow.",
+              "explanation": "One request waits while another changes the same data."
+            }
+          ],
+          "limitations": [
+            "This is a simulated bank. It does not hold real deposits.",
+            "The hosted demo keeps its existing access protection.",
+            "Backend counts are historical. They were not rerun for this portfolio."
+          ],
+          "evidence": [
+            {
+              "id": "bank-tests",
+              "value": "154",
+              "label": "Banking rules checked",
+              "before": "615 assertions",
+              "after": "7 concurrency / locking tests",
+              "unit": "Historical automated verification",
+              "context": "MVP Bank · backend verification recorded 17 October 2026",
+              "detail": "The project README records 154 tests and 615 assertions passing on PostgreSQL and MySQL on 17 October 2026. The 28 September audit also records seven real MySQL concurrency and lock-behavior tests. These include overlapping withdrawals, duplicate retries, opposing transfers, account opening, and freeze visibility. The backend suite was not rerun for this portfolio; these figures describe saved verification.",
+              "date": "2026-10-17",
+              "changed": "I checked money rules, access rules, and overlapping requests.",
+              "explanation": "Individual checks inside automated tests.",
+              "method": "Saved README verification on PostgreSQL and MySQL. A 28 September audit records seven concurrency and locking cases.",
+              "limits": "Historical verification from 17 October 2026. The backend suite was not rerun for this portfolio.",
+              "beforeLabel": "Individual checks",
+              "afterLabel": "Overlapping requests",
+              "summary": "Saved tests check how money changes."
+            },
+            {
+              "id": "bank-api",
+              "value": "17",
+              "label": "Documented app actions",
+              "before": "Authentication · accounts · money",
+              "after": "History · admin controls",
+              "unit": "OpenAPI operations",
+              "context": "MVP Bank · OpenAPI and route inventory",
+              "detail": "The API exposes 17 documented versioned operations covering authentication, accounts, simulated money operations, transaction history, and admin controls. The saved audit checked that method/path pairs match the route inventory. This is an API surface count, not a transaction-volume or customer metric.",
+              "date": "Reviewed 19 October 2026",
+              "changed": "I documented the actions for accounts, money, history, and admin tools.",
+              "explanation": "A set of actions another program can request.",
+              "method": "Compare the OpenAPI action list with the route list.",
+              "limits": "A count of documented actions. It is not a count of customers or money transfers.",
+              "beforeLabel": "Includes",
+              "afterLabel": "Also includes"
+            },
+            {
+              "id": "frontend-tests",
+              "value": "64",
+              "label": "Browser logic checked",
+              "before": "MVP Bank 49",
+              "after": "MASR Security 15",
+              "unit": "Passing JavaScript tests",
+              "context": "Local logic tests · 20 October 2026",
+              "detail": "All 49 MVP Bank frontend logic tests and all 15 MASR JavaScript tests passed during portfolio preparation. They cover exact money formatting, uncertain-request recovery, request-key reuse, stale-response protection, navigation, and admin catalog interactions. They are executable logic tests; they do not substitute for complete browser or production testing.",
+              "date": "2026-10-20",
+              "changed": "I checked money display, request recovery, navigation, and catalog actions.",
+              "explanation": "Automated checks for the JavaScript rules used by the screens.",
+              "method": "Run the existing project JavaScript logic tests: MVP Bank 49, MASR 15.",
+              "limits": "All 49 MVP Bank and 15 MASR logic tests passed again on 20 October 2026. Logic checks do not replace a full browser or production test.",
+              "beforeLabel": "MVP Bank",
+              "afterLabel": "MASR Security"
+            }
+          ],
+          "permissions": [],
+          "diagram": {
+            "image": "/assets/bank-project.webp",
+            "imageAlt": "Source-based diagram of the MVP Bank request flow.",
+            "imageCaption": "Source-based explanation. This is a diagram, not a screenshot."
+          }
+        }
+      },
+      {
+        "id": "order",
+        "name": "Order App",
+        "kind": "FOOD-ORDERING API",
+        "description": "A food-ordering API with customer, restaurant owner, and admin roles.",
+        "tags": [
+          "Laravel",
+          "REST API",
+          "Role permissions"
+        ],
+        "imageLabel": "Order App sign-in screenshot",
+        "alt": "Order App sign-in screen with an example.com email address and masked password; no customer records are visible.",
+        "detail": "Customers order and track their own orders. Restaurant owners manage their restaurants, meals, and incoming orders. Admins review owner applications and oversee the platform.",
+        "facts": [
+          "Orders move through Pending, Preparing, On the way, and Delivered.",
+          "An order can be Cancelled only while pending."
+        ],
+        "caseStudy": {
+          "role": "I built the API, access rules, owner applications, order flow, and scoped delivery tracking.",
+          "changes": [
+            "Separated 3 roles: customer, restaurant owner, and admin.",
+            "Checked ownership for addresses, meals, restaurants, orders, and tracking.",
+            "Kept 5 order statuses and controlled the allowed changes.",
+            "Added owner applications and limited who can update delivery locations."
+          ],
+          "results": [
+            "3 roles with explicit ownership rules.",
+            "5 order statuses with controlled changes.",
+            "Delivery updates require the right owner, state, and permission."
+          ],
+          "decisions": [
+            {
+              "title": "Check the person and the record",
+              "choice": "Check the role and ownership for each action.",
+              "tradeoff": "Each action needs a clear rule. One owner cannot change another owner’s records.",
+              "explanation": "Rules decide who can see or change each record."
+            },
+            {
+              "title": "Keep the order flow on the server",
+              "choice": "Allow only valid changes. Customers can cancel while an order is pending.",
+              "tradeoff": "The flow is strict. A client cannot skip steps or rewrite a completed order.",
+              "explanation": "The app checks each step before the order moves on."
+            },
+            {
+              "title": "Limit delivery updates",
+              "choice": "Check the restaurant owner, the order state, and the delivery:update permission.",
+              "tradeoff": "Tracking needs more checks. General sign-in access cannot write locations.",
+              "explanation": "Only an allowed owner can update an active delivery."
+            }
+          ],
+          "limitations": [
+            "A project demonstration. No order-volume or delivery-time claims."
+          ],
+          "evidence": [],
+          "permissions": [
+            [
+              "Customer",
+              "Place and view own orders. Cancel while pending."
+            ],
+            [
+              "Restaurant owner",
+              "Manage owned restaurants and meals. Update their orders."
+            ],
+            [
+              "Admin",
+              "Review owner applications and oversee the app."
+            ]
+          ],
+          "diagram": {
+            "image": "/assets/order-project.webp",
+            "imageAlt": "Source-based diagram of Order App roles and order flow.",
+            "imageCaption": "Source-based explanation. This is a diagram, not a screenshot."
+          }
+        }
+      },
+      {
+        "id": "batman",
+        "name": "Batman Cave Ideas",
+        "kind": "LEARNING ARCHIVE",
+        "description": "An early Laravel learning archive for CRUD, authentication, validation, and testing.",
+        "tags": [
+          "Laravel",
+          "Learning archive"
+        ],
+        "detail": "This archive records earlier learning work. Edit and delete ownership checks still need protection.",
+        "facts": [],
+        "caseStudy": {
+          "role": "Learning-project developer.",
+          "changes": [
+            "Built idea creation, viewing, editing, and deletion.",
+            "Practised sign-in, input checks, and notifications."
+          ],
+          "results": [
+            "A learning step toward clearer access rules in later projects."
+          ],
+          "decisions": [],
+          "limitations": [
+            "Edit and delete ownership checks still need protection."
+          ],
+          "evidence": [],
+          "permissions": []
+        }
+      }
+    ],
+    "flow": [
+      "Pending",
+      "Preparing",
+      "On the way",
+      "Delivered"
+    ],
+    "cancel": "Cancelled — only while pending",
+    "fullCaseStudy": "Full case study (English)"
+  },
+  "demo": {
+    "eyebrow": "ONE REQUEST. ONE CHANGE.",
+    "title": "Try the safe-retry demo",
+    "intro": "What happens when a request works, but the response never arrives?",
+    "badge": "Local simulation · fictional money",
+    "balance": "Balance",
+    "stored": "Stored in piastres",
+    "key": "Request key",
+    "send": "Send EGP 100",
+    "retry": "Connection dropped: retry",
+    "reset": "Reset demo",
+    "ready": "Ready. Send EGP 100 to start.",
+    "sent": "Processed once. The response was lost. Retry with the same request key.",
+    "replayed": "Existing receipt found. No second debit. The balance stays the same.",
+    "explanation": "EGP 1,000.00 = 100000 piastres. This walkthrough stores integer amounts and remembers the request key.",
+    "amount": "EGP",
+    "unchanged": "Same key. Same receipt. No extra debit.",
+    "client": "Client",
+    "server": "Server",
+    "sameReceipt": "Same key: returning the first receipt",
+    "receipt": "First receipt saved",
+    "awaiting": "Waiting for a request",
+    "receiptAmount": "EGP 100 · one debit only",
+    "noRequest": "No amount has changed.",
+    "withoutJs": "This interactive demo needs JavaScript. Sending EGP 100 changes 100000 piastres to 90000. Retrying the same request key returns the first receipt and leaves 90000 unchanged.",
+    "sending": "Sending the request key. One debit only."
+  },
+  "results": {
+    "eyebrow": "02 / VERIFIED RESULTS",
+    "title": "Less waiting. Measured.",
+    "intro": "MASR Security · Largest Contentful Paint (LCP)",
+    "home": "Homepage",
+    "shop": "Shop",
+    "before": "Before",
+    "after": "After",
+    "seconds": "s",
+    "note": "Mobile lab medians, 5 October 2026. Homepage: 3 runs before and 3 runs after. Shop: 2 successful runs before and 3 runs after.",
+    "caveat": "These saved lab conditions do not represent every visitor."
+  },
+  "skills": {
+    "eyebrow": "03 / HOW I WORK",
+    "title": "How I build and learn.",
+    "groups": [
+      {
+        "title": "Build",
+        "items": [
+          "PHP / Laravel",
+          "SQL / Vanilla JavaScript",
+          "HTML & CSS / Blade"
+        ]
+      },
+      {
+        "title": "Connect services",
+        "items": [
+          "REST APIs / Laravel Sanctum",
+          "API Resources / OpenAPI",
+          "Paymob sandbox / Signed webhooks"
+        ]
+      },
+      {
+        "title": "Keep data safe",
+        "items": [
+          "MySQL / PostgreSQL / Eloquent",
+          "Transactions / Row locking",
+          "Authorization policies / Validation"
+        ]
+      },
+      {
+        "title": "Check my work",
+        "items": [
+          "PHPUnit / Pest / Frontend logic tests",
+          "Postman / Git & GitHub",
+          "Performance measurement / OOP & SOLID"
+        ]
+      }
+    ],
+    "education": "Education",
+    "degree": "B.Sc. in Artificial Intelligence",
+    "university": "Kafrelsheikh University · 2023",
+    "study": "Self-directed courses",
+    "bio": "I build web applications with PHP, Laravel, SQL, and JavaScript. I turn requirements into clear screens and careful data rules. I worked independently on MASR Security, following requirements from its manager. My own projects help me test harder problems.",
+    "opportunities": "Jobs and freelance work are welcome. Remote, hybrid, and on-site work are open for discussion.",
+    "aboutAlt": "Mohamed Walaa Zain standing by the waterfront at night.",
+    "capabilities": "Tools and practices",
+    "howTitle": "How I work",
+    "how": [
+      {
+        "title": "Understand the need",
+        "text": "MASR: turn the manager’s requirements into clear shop and catalog tasks."
+      },
+      {
+        "title": "Build clear rules",
+        "text": "Order App: check both the role and the owner of each record."
+      },
+      {
+        "title": "Test the hard cases",
+        "text": "MVP Bank: repeat a request and overlap two withdrawals."
+      },
+      {
+        "title": "Measure the change",
+        "text": "MASR: compare page loading before and after, with dates and test limits."
+      }
+    ],
+    "location": "6th of October, Giza, Egypt",
+    "learningSource": "Laracasts.com"
+  },
+  "faq": {
+    "eyebrow": "04 / A FEW ANSWERS",
+    "title": "Before we talk.",
+    "items": [
+      {
+        "question": "Do you work remotely?",
+        "answer": "Remote, hybrid, and on-site arrangements are open for discussion. Employment and freelance enquiries are welcome."
+      },
+      {
+        "question": "What do you build best?",
+        "answer": "Web applications with PHP, Laravel, SQL, and JavaScript, with a focus on permissions, data integrity, and clear workflows."
+      },
+      {
+        "question": "How long does a small project take?",
+        "answer": ""
+      },
+      {
+        "question": "Do you test your code?",
+        "answer": "Yes. My work includes PHPUnit, Pest, and frontend logic tests. MVP Bank has 154 backend tests in the saved run from 17 October 2026."
+      },
+      {
+        "question": "Can you work with an Arabic and English site?",
+        "answer": "Yes. MASR Security is an Arabic and English storefront that I developed independently from the manager’s requirements."
+      },
+      {
+        "question": "How do we start?",
+        "answer": "Email me to discuss the project or role. Remote, hybrid, and on-site arrangements are open for discussion."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "05 / NEXT CONVERSATION",
+    "title": "Have a role or a project in mind?",
+    "text": "Jobs and freelance work are welcome. Remote, hybrid, and on-site work are open for discussion.",
+    "name": "Mohamed Walaa Zain"
+  },
+  "footer": "Backend & Web Developer",
+  "back": "Back to top",
+  "portfolio": "Download portfolio PDF",
+  "legacy": "Previous portfolio",
+  "caseStudy": {
+    "back": "Back to projects",
+    "role": "My role",
+    "changes": "What I built",
+    "results": "Recorded results",
+    "decisions": "Decisions and tradeoffs",
+    "limits": "Limits and notes",
+    "evidence": "Measurement details",
+    "home": "Portfolio home",
+    "notFound": "This page is not here.",
+    "returnHome": "Return home",
+    "permissions": "Role boundaries",
+    "diagram": "Source-based explanation"
+  },
+  "portraitInteraction": "Animate portrait"
+}

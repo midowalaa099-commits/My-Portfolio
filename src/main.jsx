@@ -1,0 +1,12 @@
+import './fonts.css';
+import React from 'react';
+import { createRoot, hydrateRoot } from 'react-dom/client';
+import App from './App.jsx';
+import './style.css';
+import './identity.css';
+import './quality.css';
+import './motion.css';
+const root = document.getElementById('root');
+const props = { initialLang: root.dataset.lang || 'en', page: root.dataset.page || 'home' };
+if (root.hasChildNodes()) hydrateRoot(root, <App {...props} />);
+else createRoot(root).render(<App {...props} />);
