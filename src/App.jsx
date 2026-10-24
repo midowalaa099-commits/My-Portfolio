@@ -1,3 +1,4 @@
+import brandSvg from './brand-svg.js';
 import React, { useEffect, useState } from 'react';
 import en from './en.json';
 import ar from './ar.json';
@@ -8,16 +9,9 @@ import Faq from './Faq.jsx';
 import Contact from './Contact.jsx';
 import { config } from './config.js';
 import CaseStudy from './CaseStudy.jsx';
-import PortraitPhoto from './PortraitPhoto.jsx';
 const anchors = ['projects', 'results', 'skills', 'faq', 'contact'];
 
 export default function App({ initialLang = 'en', page = 'home' }) {
-  useEffect(() => {
-    let cleanup;
-    let cancelled = false;
-    import('./motion.js').then(({ installMotion }) => { if (!cancelled) cleanup = installMotion(); });
-    return () => { cancelled = true; cleanup?.(); };
-  }, []);
   const lang = initialLang;
   const [menu, setMenu] = useState(false);
   const t = lang === 'ar' ? ar : en;
@@ -35,20 +29,18 @@ export default function App({ initialLang = 'en', page = 'home' }) {
   }, [lang, t, page]);
   return <>
     <a className="skip" href="#main">{t.skip}</a>
-    <span id="top" className="top-origin" aria-hidden="true" />
-    <header className="topbar" onKeyDown={event => { if (event.key === 'Escape') setMenu(false); }}>
+    <header className="topbar" id="top" onKeyDown={event => { if (event.key === 'Escape') setMenu(false); }}>
       <div className="wrap nav">
         <a className="logo" href={page === 'home' ? '#top' : '/My-Portfolio/en/'} aria-label={'MWZ — ' + t.contact.name}>
-          {config.logo ? <img src={config.logo} width="60" height="48" alt="MWZ" /> : <>MWZ<span>.</span></>}
+          {config.logo ? <span className="inline-brand" aria-hidden="true" dangerouslySetInnerHTML={{__html:brandSvg}} /> : <>MWZ<span>.</span></>}
         </a>
         <nav aria-label={t.menu} id="mobile-menu" className={menu ? 'navigation open' : 'navigation'}>
-          <span className="nav-indicator" aria-hidden="true" />
           {anchors.map((id, index) => <a key={id} href={(page === 'home' ? '' : '/My-Portfolio/en/') + '#' + id} onClick={() => setMenu(false)}>{t.nav[index]}</a>)}
         </nav>
         <div className="nav-actions">
           <a className="language" href={lang === 'en' ? '/My-Portfolio/ar/' + (page === 'home' ? '' : '#projects') : '/My-Portfolio/en/'} aria-label={t.language + ' — ' + t.languageLabel} lang={lang === 'en' ? 'ar' : 'en'}>{t.language}</a>
-          <a className="button compact" href={'mailto:' + config.email}>{t.email}<span aria-hidden="true">↗</span></a>
-          <button className="menu-button" aria-expanded={menu} aria-controls="mobile-menu" aria-label={menu ? t.close : t.menu} onClick={() => setMenu(!menu)}>{menu ? '×' : '☰'}</button>
+          <a className="button compact" href={'mailto:' + config.email}>{t.email}</a>
+          <button className="menu-button" aria-expanded={menu} aria-controls="mobile-menu" aria-label={menu ? t.close : t.menu} onClick={() => setMenu(!menu)}>{menu ? t.close : t.menu}</button>
         </div>
       </div>
     </header>
@@ -59,18 +51,18 @@ export default function App({ initialLang = 'en', page = 'home' }) {
           <p className="identity-role">{t.footer}</p>
           <p className="identity-intro">{t.hero.title}</p>
           <div className="actions">
-            <a className="button" href="#projects">{t.hero.projects}<span aria-hidden="true">↗</span></a>
-            {config.cvFile && <a className="button secondary" href={config.cvFile} download={config.cvDownloadName}>{t.cv}<span aria-hidden="true">↓</span></a>}
+            <a className="button" href="#projects">{t.hero.projects}</a>
+            {config.cvFile && <a className="button secondary" href={config.cvFile} download>{t.cv}</a>}
           </div>
           <p className="identity-stack"><bdi>{t.hero.stack}</bdi></p>
           <p className="availability"><span aria-hidden="true" />{t.hero.availability}</p>
         </div>
         {config.portrait && <figure className="portrait identity-portrait">
-          <PortraitPhoto label={t.portraitInteraction} src={config.portrait} srcSet={config.portraitSet || undefined} sizes="(max-width: 560px) calc(100vw - 40px), (max-width: 1000px) 42vw, 440px" width="700" height="875" alt={t.hero.photo} fetchPriority="high" />
+          <img src={config.portrait} srcSet={config.portraitSet || undefined} sizes="(max-width: 560px) calc(100vw - 40px), (max-width: 1000px) 42vw, 440px" width="700" height="875" alt={t.hero.photo} fetchPriority="high" />
           <figcaption>{t.hero.photoCaption}</figcaption>
         </figure>}
         <div className="proof">{t.hero.proof.map(proof => <div className="proof-item" key={proof.value}>
-          <strong dir="ltr"><span className="sr-only">{proof.value}</span><span aria-hidden="true" data-proof-count={parseInt(proof.value, 10)} data-proof-suffix={proof.value.includes('%') ? '%' : ''}>{proof.value}</span></strong><div><p>{proof.text}</p><small>{proof.note}</small></div>
+          <strong dir="ltr">{proof.value}</strong><div><p>{proof.text}</p><small>{proof.note}</small></div>
         </div>)}</div>
       </section>
       <Projects t={t} /><Results t={t} /><Skills t={t} /><Faq t={t} /></> : page === '404' ? <section className="case-study wrap"><h1>{t.caseStudy.notFound}</h1><a className="text-link" href="/My-Portfolio/en/">{t.caseStudy.returnHome}</a></section> : <CaseStudy id={page} t={t} />}

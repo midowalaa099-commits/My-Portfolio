@@ -33,3 +33,5 @@ a{display:inline-flex;align-items:center}
 .case-study dt{font-size:18px;font-weight:600;margin-block-start:22px}
 .case-study dd{font-size:16px;line-height:1.85;color:var(--muted);margin-inline-start:0}
 .text-link,.project-details summary,.demo-controls .button,.balance-label,.storage,.bar-label,.demo-badge,.education h3{font-size:16px}
+
+.inline-brand{display:block;width:60px;height:48px}.inline-brand svg{display:block;width:60px;height:48px}

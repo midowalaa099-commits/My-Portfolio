@@ -1,0 +1,11 @@
+{
+  "initialJavaScriptGzip": 90000,
+  "cssGzip": 8000,
+  "selectedImageBytes": 100000,
+  "estimatedInitialTransferBytes": 200000,
+  "desktopEstimatedInitialTransferBytes": {
+    "en": 210000,
+    "ar": 240000
+  },
+  "_comment": "Desktop transfer caps are regression limits just above current cold-load medians (EN 202.51 KB; AR 232.33 KB), not performance goals. Both desktop goals remain 200000 bytes; both mobile profiles enforce 200000 bytes. JavaScript enforces 90000 bytes gzip, with 50000 bytes retained as the goal in performance-goals.json."
+}

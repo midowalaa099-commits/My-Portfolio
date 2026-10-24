@@ -1,0 +1,52 @@
+{
+  "limits": {
+    "initialJavaScriptGzip": 90000,
+    "cssGzip": 8000,
+    "selectedImageBytes": 100000,
+    "estimatedInitialTransferBytes": 200000,
+    "desktopEstimatedInitialTransferBytes": {
+      "en": 210000,
+      "ar": 240000
+    },
+    "_comment": "Desktop transfer caps are regression limits just above current cold-load medians (EN 202.51 KB; AR 232.33 KB), not performance goals. Both desktop goals remain 200000 bytes; both mobile profiles enforce 200000 bytes. JavaScript enforces 90000 bytes gzip, with 50000 bytes retained as the goal in performance-goals.json."
+  },
+  "conditions": "Conservative static cold-load estimate: compressed HTML/current copy, inline and linked CSS, entry static JS graph, both required fonts in Arabic, portrait and MASR responsive images at DPR 1, 1000-byte response allowance. Runtime Lighthouse separately measures actual transfers.",
+  "results": [
+    {
+      "lang": "en",
+      "width": 375,
+      "initialJavaScriptGzip": 86699,
+      "cssGzip": 6028,
+      "selectedImageBytes": 19708,
+      "estimatedInitialTransferBytes": 156171,
+      "failures": []
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "initialJavaScriptGzip": 86699,
+      "cssGzip": 6028,
+      "selectedImageBytes": 44416,
+      "estimatedInitialTransferBytes": 200953,
+      "failures": []
+    },
+    {
+      "lang": "ar",
+      "width": 375,
+      "initialJavaScriptGzip": 86699,
+      "cssGzip": 6028,
+      "selectedImageBytes": 19708,
+      "estimatedInitialTransferBytes": 185660,
+      "failures": []
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "initialJavaScriptGzip": 86699,
+      "cssGzip": 6028,
+      "selectedImageBytes": 44416,
+      "estimatedInitialTransferBytes": 230442,
+      "failures": []
+    }
+  ]
+}

@@ -158,7 +158,7 @@
             },
             {
               "id": "lighthouse",
-              "value": "92 → 99",
+              "value": "92 to 99",
               "label": "Higher mobile lab scores",
               "before": "Home 92 · shop 98",
               "after": "Home 99 · shop 100",
@@ -208,7 +208,7 @@
             },
             {
               "id": "queries",
-              "value": "11 → 8",
+              "value": "11 to 8",
               "label": "Less database work",
               "before": "Homepage 11 · dashboard 5",
               "after": "Homepage 8 · dashboard 0",
@@ -508,16 +508,7 @@
     "replayed": "Existing receipt found. No second debit. The balance stays the same.",
     "explanation": "EGP 1,000.00 = 100000 piastres. This walkthrough stores integer amounts and remembers the request key.",
     "amount": "EGP",
-    "unchanged": "Same key. Same receipt. No extra debit.",
-    "client": "Client",
-    "server": "Server",
-    "sameReceipt": "Same key: returning the first receipt",
-    "receipt": "First receipt saved",
-    "awaiting": "Waiting for a request",
-    "receiptAmount": "EGP 100 · one debit only",
-    "noRequest": "No amount has changed.",
-    "withoutJs": "This interactive demo needs JavaScript. Sending EGP 100 changes 100000 piastres to 90000. Retrying the same request key returns the first receipt and leaves 90000 unchanged.",
-    "sending": "Sending the request key. One debit only."
+    "unchanged": "Same key. Same receipt. No extra debit."
   },
   "results": {
     "eyebrow": "02 / VERIFIED RESULTS",
@@ -651,6 +642,5 @@
     "returnHome": "Return home",
     "permissions": "Role boundaries",
     "diagram": "Source-based explanation"
-  },
-  "portraitInteraction": "Animate portrait"
+  }
 }

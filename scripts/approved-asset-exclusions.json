@@ -1,0 +1,6 @@
+{
+  "assets/index-DRvv7YpJ.js": {
+    "reason": "User explicitly approved removing the unused legacy v4 bundle from the release payload. Original retained in separate rollback backup.",
+    "date": "2026-10-24"
+  }
+}

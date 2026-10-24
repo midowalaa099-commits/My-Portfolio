@@ -5,7 +5,6 @@ import App from './App.jsx';
 import './style.css';
 import './identity.css';
 import './quality.css';
-import './motion.css';
 const root = document.getElementById('root');
 const props = { initialLang: root.dataset.lang || 'en', page: root.dataset.page || 'home' };
 if (root.hasChildNodes()) hydrateRoot(root, <App {...props} />);

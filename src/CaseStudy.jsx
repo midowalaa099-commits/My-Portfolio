@@ -6,7 +6,7 @@ export default function CaseStudy({ id, t }) {
   const p = getProjects(t).find(project => project.id === id);
   const c = p.caseStudy;
   return <article className="case-study wrap" aria-labelledby="case-title">
-    <a className="text-link" href="/My-Portfolio/en/#projects">← {t.caseStudy.back}</a>
+    <a className="text-link" href="/My-Portfolio/en/#projects">{t.caseStudy.back}</a>
     <header><p className="eyebrow">{p.kind}</p><h1 id="case-title">{p.name}</h1><p className="case-lead">{p.description}</p><p>{p.detail}</p><ProjectLinks project={p} t={t} /></header>
     {p.image && <figure className="browser"><img src={p.image} srcSet={p.srcSet} sizes="(max-width: 560px) calc(100vw - 40px), (max-width: 1000px) calc(100vw - 96px), 1000px" width={p.width} height={p.height} alt={p.alt} /><figcaption>{p.imageLabel}</figcaption></figure>}
     <ul>{p.facts.map(fact => <li key={fact}>{fact}</li>)}</ul>

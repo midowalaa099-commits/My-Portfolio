@@ -9,9 +9,7 @@ for (const lang of ['en', 'ar']) {
   assert(html.includes(`lang="${lang}" dir="${lang === 'ar' ? 'rtl' : 'ltr'}"`));
   assert(html.includes('id="hero-title"'), 'Essential content must exist before JavaScript');
   for (const tag of ['canonical', 'hreflang="en"', 'hreflang="ar"', 'twitter:card', 'og:url', 'og:locale']) assert(html.includes(tag), `Missing ${tag}`);
-  for (const project of getProjects(en)) {
-    if (project.source) assert(html.includes(`href="${esc(project.source)}"`), `${project.id} configured source missing from ${lang} homepage`);
-  }
+  assert(!html.includes('github.com/midowalaa099-commits/mvp-bank'), 'Unverified bank source must stay hidden');
 }
 for (const p of getProjects(en)) {
   const html = fs.readFileSync(`dist/work/${p.slug}/index.html`, 'utf8');

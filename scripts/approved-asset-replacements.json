@@ -1,0 +1,16 @@
+{
+  "downloads/cv.pdf": {
+    "sha256": "33a2b0e002d9b0f5b59c19c7c3894979adb487352070dc3931a3e83e47781acc",
+    "sourceCommit": "69f12b8dbe61dbcc3a8cac19dbdcb4a5e132d596",
+    "originalV6Sha256": "e7ea2a68b83049f8c2409007648910935c5220e2299df0fc3b8f8c1e3d7861b1",
+    "approval": "User selected the Live GitHub CV on 24 October 2026. User approved current LinkedIn hyperlink-only update on 24 October 2026; rendered pages and text unchanged.",
+    "liveSha256BeforeLinkUpdate": "ee196e16809035e66ea46ab1ce7b93db7fd79d438559d65836029657d6a79bdb"
+  },
+  "downloads/portfolio.pdf": {
+    "sha256": "03d1080c5ef14d40714960e4efda66792f0a9624a57ab009ce44d22ae6926722",
+    "sourceCommit": "69f12b8dbe61dbcc3a8cac19dbdcb4a5e132d596",
+    "originalV6Sha256": "e790f0262ac74a77157809b12c8b3cde38fda0edcdd9868a7bb9cf47ee03bc0e",
+    "approval": "User selected the Live GitHub portfolio PDF on 24 October 2026. User approved current LinkedIn hyperlink-only update on 24 October 2026; rendered pages and text unchanged.",
+    "liveSha256BeforeLinkUpdate": "7f858b1f3ee85f71d2540713e8c15c110374f28bb7cfd47c4a8ecfc21be3935d"
+  }
+}

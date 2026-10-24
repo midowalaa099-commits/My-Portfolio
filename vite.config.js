@@ -10,7 +10,7 @@ export default defineConfig({ base: '/My-Portfolio/', appType: 'mpa', plugins: [
     return () => server.middlewares.use((req, res, next) => {
       const root = path.resolve('dist');
       let target;
-      try { target = path.resolve(root, '.' + decodeURIComponent(new URL(req.url, 'http://localhost').pathname)); } catch { target = ''; }
+      try { target = path.resolve(root, '.' + decodeURIComponent(new URL(req.url, 'http://localhost').pathname.replace(/^\/My-Portfolio(?=\/|$)/,''))); } catch { target = ''; }
       if (target.startsWith(root + path.sep) && fs.existsSync(target) || target === root) return next();
       res.statusCode = 404;
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
@@ -22,5 +22,5 @@ export default defineConfig({ base: '/My-Portfolio/', appType: 'mpa', plugins: [
     .replace(/(<meta name="description" content=")[^"]*/, '$1' + escape(en.meta.description))
     .replace(/(<meta property="og:title" content=")[^"]*/, '$1' + escape(en.meta.title))
     .replace(/(<meta property="og:description" content=")[^"]*/, '$1' + escape(en.meta.description))
-    .replace(/(<meta property="og:image" content=")[^"]*/, '$1' + escape(config.siteUrl + config.ogImage));
+    .replace(/(<meta property="og:image" content=")[^"]*/, '$1' + escape(new URL(config.ogImage, config.siteUrl).href));
 } }] });

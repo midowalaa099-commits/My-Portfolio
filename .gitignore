@@ -1,10 +1,8 @@
 node_modules/
 dist/
-/work/
+work/
 .DS_Store
 
 outputs/
 
 .prerender-build/
-
-public/downloads/* 2.pdf

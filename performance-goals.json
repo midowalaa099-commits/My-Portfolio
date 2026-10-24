@@ -1,0 +1,5 @@
+{
+  "initialJavaScriptGzip": 50000,
+  "estimatedInitialTransferBytes": 200000,
+  "note": "Goals, not regression gates. JavaScript regression gate is 90000 bytes gzip."
+}

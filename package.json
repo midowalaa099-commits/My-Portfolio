@@ -5,13 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "vite build && vite build --ssr src/entry-server.jsx --outDir .prerender-build && node scripts/prerender.mjs",
+    "build": "vite build && vite build --ssr src/entry-server.jsx --outDir .prerender-build && node scripts/prerender.mjs && node scripts/performance-budget.mjs",
     "preview": "vite preview --host 127.0.0.1",
     "test": "node --test src/retry.test.js",
     "audit:lighthouse": "node scripts/lighthouse.mjs",
     "verify:preservation": "node scripts/verify-preservation.mjs",
     "check:site": "node scripts/check-site.mjs",
-    "fonts:subset": "python3 scripts/subset-arabic-font.py"
+    "fonts:subset": "python3 scripts/subset-arabic-font.py",
+    "check:performance": "node scripts/performance-budget.mjs",
+    "check:release": "node scripts/check-release.mjs",
+    "prepare:pages": "npm run build && npm run check:release && node scripts/prepare-pages.mjs"
   },
   "dependencies": {
     "react": "^19.0.0",

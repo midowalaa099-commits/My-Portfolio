@@ -1,23 +1,14 @@
-# Mohamed Walaa Zain — Portfolio
+# Version 6 public-release candidate — NOT PUBLISHED
 
-Bilingual English/Arabic portfolio for a Backend & Web Developer.
+Final URL: https://midowalaa099-commits.github.io/My-Portfolio/
+Base private v6 commit ca395c986eeff4769e5a10ce7df8b7873b465d7e plus accepted Phase 2 changes and release metadata/base-path fixes.
 
-Website: https://midowalaa099-commits.github.io/My-Portfolio/
+Node >=22.19. npm ci; npm run prepare:pages; npm test; npm run check:site; npm run verify:preservation; npm run check:performance. docs/ contains the staged GitHub Pages payload. .nojekyll included. No .openai Site identity is included to prevent accidental deployment to the private Site.
 
-## Develop
+The default public homepage is indexable. Case studies, learning, legacy and 404 pages remain noindex. The separate MWZ-Private-Performance local preview remains noindex; do not deploy this public payload to the private-preview Site.
 
-Requires Node.js 22.19 or later. Run `npm ci` and `npm run dev`.
+Retained share image public/images/og-placeholder.png is 1200×630. User-selected assets: live GitHub CV and portfolio PDF from commit 69f12b8dbe61dbcc3a8cac19dbdcb4a5e132d596, with the lighter original v6 hero set. The two PDF replacements are verified separately; all other original public assets remain unchanged. Decorative symbols were removed as requested. Demo behavior is unchanged. JS hard cap 90 KB gzip; goal 50 KB. Mobile transfer cap 200 KB; EN desktop 210 KB / AR desktop 240 KB; desktop goal 200 KB.
 
-## Validate and build
+Publication, repository pushes, access changes, alternate-site redirects/noindex changes and Search Console submissions require separate approval. GitHub Pages robots.txt must be at the hostname root to be authoritative; docs/robots.txt here is at the project path. An optional hostname-root robots.txt is provided separately, not installed.
 
-Run `npm test`, `npm run build`, `npm run check:site`, and `npm run verify:preservation`.
-
-Content: `src/en.json`, `src/ar.json`. Shared project destinations: `src/config.js`.
-
-The PDFs in `public/downloads/` link to the public website. The preservation baseline records the approved PDF revisions alongside the preserved assets.
-
-## Publish on GitHub Pages
-
-Build with `npm run build`, copy the contents of `dist/` into `docs/`, and add `docs/.nojekyll`. GitHub Pages publishes the `main` branch's `/docs` folder. Commit source and generated output together after checking changes.
-
-The bank and retry demo use fictional money. Payment integration claims refer to sandbox verification only. Performance figures are dated lab measurements, not real-user metrics.
+Root landing: /My-Portfolio/ immediately redirects to /My-Portfolio/en/ (JS replace + HTML refresh). GitHub Pages serves the redirect document with HTTP 200, not a server-side 301. This local change is RC03 and awaits review.
