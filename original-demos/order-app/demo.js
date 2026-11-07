@@ -77,7 +77,8 @@ export function orderApi({ state, role, path, method, body, query, save }) {
         if (!meal || !Number.isInteger(item.quantity) || item.quantity < 1 || item.quantity > 99) reject('Review the meals and quantities in your cart.');
         return { meal: { ...meal }, quantity: item.quantity, price: Number(meal.price) };
       });
-      const total = items.reduce((sum, i) => sum + cents(i.price) * BigInt(i.quantity), 0n);
+      // The original CartPage displays a fixed 2.50 delivery fee.
+      const total = items.reduce((sum, i) => sum + cents(i.price) * BigInt(i.quantity), 250n);
       const item = { id: nextId(state.orders), user_id: user.id, restaurant_id: restaurant.id, restaurant: { ...restaurant }, items, total_price: Number(total) / 100, status: 'pending', address: { ...address }, created_at: now() };
       state.orders.unshift(item); save(); return data(item);
     }
