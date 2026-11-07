@@ -31,7 +31,11 @@ for (const [slug, original, entry, css, mount] of [
   // Resolve dependencies from the installed original application; no dependency install or .env is needed.
   try { await fs.symlink(dependencies, path.join(project, 'node_modules'), 'dir'); } catch (error) { if (error.code !== 'EEXIST') throw error; }
   await fs.writeFile(path.join(temp, 'index.html'), `<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Original ${slug} interface with fictional demo data. No account required."><title>${slug === 'mvp-bank' ? 'MVP Bank · Your money, in your rhythm.' : 'Order App'}</title></head><body><div id="${mount}"></div><script type="module" src="./entry.tsx"></script></body></html>`);
-  await build({ configFile: false, root: temp, base: './', plugins: [react(), tailwind()], publicDir: false,
+  const scopedCss = { name: 'scope-original-css', enforce: 'pre', transform(code, id) {
+    const stylesheet = path.join(project, css || 'src/index.css');
+    if (id === stylesheet) return code.replace(/@import ['"]tailwindcss['"];/, `@import 'tailwindcss' source(none);\n@source ${JSON.stringify(path.join(project, slug === 'mvp-bank' ? 'resources/js' : 'src'))};`);
+  } };
+  await build({ configFile: false, root: temp, base: './', plugins: [scopedCss, react(), tailwind()], publicDir: false,
     define: { 'import.meta.env.VITE_API_URL': JSON.stringify('/api/v1') },
     resolve: { alias: { react: path.join(dependencies, 'react'), 'react-dom': path.join(dependencies, 'react-dom'), ...(slug === 'order-app' ? { leaflet: path.join(dependencies, 'leaflet') } : {}) } },
     build: { outDir: path.join(temp, 'dist'), assetsInlineLimit: 1000000, cssCodeSplit: false, minify: true, rollupOptions: { output: { inlineDynamicImports: true } } },
