@@ -1,5 +1,310 @@
-<!doctype html>
-<html lang="en" dir="ltr">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,follow"><meta name="description" content="Idea Cave public interactive portfolio demo. Fictional data, no account required."><title>Idea Cave — Public interactive demo</title><link rel="icon" href="../../favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../shared/demo.css"><script type="module" src="../shared/app.js"></script></head>
-<body class="batman" data-project="batman-cave-ideas"><a class="skip" href="#main">Skip to content / روح للمحتوى</a><div id="app"><main id="main"><h1>Idea Cave</h1><p>Public interactive demo. Fictional data; no account required.</p><p>نسخة تجريبية عامة ببيانات وهمية ومن غير حساب.</p><noscript><p>Enable JavaScript to interact with the demo. No login is required.</p></noscript><a href="../../en/#projects">Back to portfolio</a></main></div><dialog id="dialog" aria-labelledby="dialog-title"></dialog><div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div></body>
+<!DOCTYPE html>
+<html lang="en" data-theme="night">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideas App</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="min-h-screen bg-black text-gray-200">
+    <div class="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_35%)]"></div>
+    <div class="container mx-auto flex items-center py-4">
+    <a href="#/ideas"
+        class="text-3xl font-black tracking-wide text-yellow-400">
+        🦇 IDEA CAVE
+    </a>
+
+    <div class="ml-auto flex gap-2">
+        
+
+        
+        <form method="POST" data-demo-reset>
+            
+            
+            <button type="submit" class="btn btn-ghost text-gray-300 hover:text-white">
+                Logout
+            </button>
+        </form>
+        <a href="#/ideas/create"
+            class="btn bg-yellow-500 hover:bg-yellow-400 border-0 text-black font-bold">
+            + New Idea
+        </a>
+        
+        
+    </div>
+
+</div>
+    <!-- Main Content -->
+<main class="container mx-auto max-w-5xl px-8 py-12">
+    
+        <div class="rounded-3xl bg-zinc-900 border border-zinc-800 shadow-[0_0_60px_rgba(0,0,0,.8)]">
+
+            <div class="p-8">
+
+                <div id="original-ideas-content"></div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center text-zinc-500 py-10 border-t border-zinc-900">
+
+        🦇 Built in the Batcave with Laravel
+
+    </footer>
+<script type="module">var i={card:`
+
+        <div class="card bg-zinc-950 border border-zinc-800 shadow-xl hover:border-yellow-500 hover:shadow-yellow-500/20 transition-all duration-300">
+
+            <div class="card-body">
+
+                <div class="flex justify-between items-center">
+
+                    <h2 class="card-title text-yellow-400">
+                        \u{1F4A1} Idea #%ID%
+                    </h2>
+
+                    <span class="badge badge-warning">
+                        %STATE%
+                    </span>
+
+                </div>
+
+                <p class="text-zinc-300 break-words">
+                    %DESCRIPTION%
+                </p>
+
+                <div class="card-actions justify-end mt-4">
+
+                    <a href="#/ideas/%ID%"
+                        class="btn btn-sm btn-outline">
+                        View
+                    </a>
+
+                    <a href="#/ideas/%ID%/edit"
+                        class="btn btn-sm btn-warning">
+                        Edit
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        `,empty:`
+
+    <div class="text-center py-20">
+
+        <div class="text-7xl mb-4">
+            \u{1F987}
+        </div>
+
+        <h2 class="text-2xl font-bold text-zinc-300">
+            No Ideas Yet
+        </h2>
+
+        <p class="text-zinc-500 mt-2">
+            Start by creating your first brilliant idea.
+        </p>
+
+    </div>
+
+    `,index:`
+    <div class="flex justify-between items-center mb-8">
+
+        <div>
+            <h1 class="text-4xl font-black text-yellow-400">
+                \u{1F987} Idea Cave
+            </h1>
+
+            <p class="text-zinc-400 mt-2">
+                Capture your best ideas before they disappear.
+            </p>
+        </div>
+
+        <a href="#/ideas/create"
+            class="btn bg-yellow-500 hover:bg-yellow-400 text-black border-0 font-bold">
+            + Create Idea
+        </a>
+
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+        %CARDS%
+
+    </div>
+
+    %EMPTY%
+
+`,show:`
+    <div class="max-w-3xl mx-auto">
+
+        <div class="card bg-zinc-950 border border-zinc-800 shadow-2xl">
+
+            <div class="card-body">
+
+                <div class="flex justify-between items-center">
+
+                    <h1 class="text-3xl font-black text-yellow-400">
+                        \u{1F4A1} Idea #%ID%
+                    </h1>
+
+                    <span class="badge badge-warning">
+                        %STATE%
+                    </span>
+
+                </div>
+
+                <div class="divider"></div>
+
+                <p class="text-xl text-zinc-200 leading-9 bg-zinc-900 p-6 rounded-xl border border-zinc-800">
+                %DESCRIPTION%
+                </p>
+
+                <div class="divider"></div>
+
+                <div class="flex gap-3 justify-end">
+
+                    <a href="#/ideas"
+                        class="btn btn-outline">
+                        \u2190 Back
+                    </a>
+
+                    <a href="#/ideas/%ID%/edit"
+                        class="btn btn-warning">
+                        \u270F\uFE0F Edit
+                    </a>
+
+                    <form action="#/ideas/%ID%" method="POST">
+
+                        
+                        <input type="hidden" name="_method" value="DELETE">
+
+                        <button
+                            class="btn btn-error"
+                            onclick="return confirm('Delete this idea?')">
+
+                            \u{1F5D1} Delete
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+`,create:`
+
+    <div class="max-w-3xl mx-auto">
+
+        <div class="card bg-zinc-950 border border-zinc-800 shadow-2xl">
+
+            <div class="card-body">
+
+                <h1 class="text-3xl font-black text-yellow-400 mb-2">
+                    \u{1F4A1} Create New Idea
+                </h1>
+
+                <p class="text-zinc-400 mb-6">
+                    Every great product starts with a single idea.
+                </p>
+
+                <form action="#/ideas" method="POST">
+                    
+                    <textarea
+                        name="description"
+                        rows="6"
+                        placeholder="Write your next big idea..."
+                        class="textarea textarea-bordered w-full bg-zinc-900 text-white border-zinc-700 focus:border-yellow-500"></textarea>
+
+                    <p data-error role="alert" class="text-red-500 mt-2"></p>
+
+                    <div class="flex justify-end gap-3 mt-6">
+
+                        <a href="#/ideas"
+                            class="btn btn-outline">
+                            Cancel
+                        </a>
+
+                        <button
+                            type="submit"
+                            class="btn btn-warning">
+                            \u{1F680} Save Idea
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+`,edit:`
+
+    <div class="max-w-3xl mx-auto">
+
+        <div class="card bg-zinc-950 border border-zinc-800 shadow-2xl">
+
+            <div class="card-body">
+
+                <h1 class="text-3xl font-black text-yellow-400 mb-4">
+                    \u270F\uFE0F Edit Idea
+                </h1>
+
+                <form action="#/ideas/%ID%" method="POST">
+
+                    
+                    <input type="hidden" name="_method" value="PATCH">
+
+                    <textarea
+                        name="description"
+                        rows="6"
+                        class="textarea textarea-bordered w-full bg-zinc-900 text-white"
+                    >%DESCRIPTION%</textarea>
+
+                    <p data-error role="alert" class="text-red-500 mt-2"></p>
+
+                    <div class="flex justify-end gap-3 mt-4">
+
+                        <a href="#/ideas/%ID%"
+                           class="btn btn-outline">
+                            Cancel
+                        </a>
+
+                        <button
+                            type="submit"
+                            class="btn btn-warning">
+                            Update Idea
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+`};var p="original-idea-cave-v1",m=()=>[{id:1,state:"pending",description:"Build an order tracking dashboard for local restaurants."},{id:2,state:"pending",description:"Create a portfolio where visitors can try every project without registering."},{id:3,state:"pending",description:"Help small shops keep track of products and low stock."}],e;try{e=JSON.parse(localStorage.getItem(p))||m()}catch{e=m()}var v=t=>String(t??"").replace(/[&<>"']/g,n=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[n]),x=(t,n={})=>t.replace(/%(ID|STATE|DESCRIPTION)%/g,(a,r)=>v(n[r.toLowerCase()])),b=document.getElementById("original-ideas-content");function o(){let t=(location.hash.slice(1)||"/ideas").split("/").filter(Boolean),n=e.find(a=>a.id===Number(t[1]));t[1]==="create"?b.innerHTML=i.create:n?b.innerHTML=x(t[2]==="edit"?i.edit:i.show,n):b.innerHTML=i.index.replace("%CARDS%",()=>e.map(a=>x(i.card,a)).join("")).replace("%EMPTY%",e.length?"":i.empty)}window.addEventListener("hashchange",o);document.addEventListener("submit",t=>{let n=t.target;if(t.preventDefault(),n.hasAttribute("data-demo-reset")){location.hash="/ideas",o();return}let a=Number((n.getAttribute("action")||"").split("/").pop()),r=new FormData(n).get("_method");if(r==="DELETE")e=e.filter(s=>s.id!==a);else{let s=String(new FormData(n).get("description")||"").trim();if(s.length<5||s.length>255){n.querySelector("[data-error]").textContent="The description must be between 5 and 255 characters.";return}r==="PATCH"?e=e.map(d=>d.id===a?{...d,description:s}:d):e.push({id:Math.max(0,...e.map(d=>d.id))+1,description:s,state:"pending"})}localStorage.setItem(p,JSON.stringify(e)),location.hash="/ideas",o()});var l=document.createElement("div");l.className="text-center text-xs text-zinc-400 px-4 py-2 border-b border-zinc-800";l.textContent="Demo \xB7 Fictional data \xB7 No account required \xB7 Changes stay in this browser. ";var c=document.createElement("button");c.textContent="Reset demo";c.className="text-yellow-400 underline";c.onclick=()=>{localStorage.removeItem(p),location.reload()};l.append(c);document.body.prepend(l);o();
+</script></body>
+
 </html>
