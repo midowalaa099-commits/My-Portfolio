@@ -7,7 +7,7 @@
     "dev": "vite --host 127.0.0.1",
     "build": "vite build && vite build --ssr src/entry-server.jsx --outDir .prerender-build && node scripts/prerender.mjs && node scripts/performance-budget.mjs",
     "preview": "vite preview --host 127.0.0.1",
-    "test": "node --test src/retry.test.js",
+    "test": "node --test src/retry.test.js tests/public-demos.test.js",
     "audit:lighthouse": "node scripts/lighthouse.mjs",
     "verify:preservation": "node scripts/verify-preservation.mjs",
     "check:site": "node scripts/check-site.mjs",

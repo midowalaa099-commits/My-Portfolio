@@ -15,37 +15,37 @@
     {
       "lang": "en",
       "width": 375,
-      "initialJavaScriptGzip": 86699,
-      "cssGzip": 6028,
+      "initialJavaScriptGzip": 86522,
+      "cssGzip": 6025,
       "selectedImageBytes": 19708,
-      "estimatedInitialTransferBytes": 156171,
+      "estimatedInitialTransferBytes": 156001,
       "failures": []
     },
     {
       "lang": "en",
       "width": 1440,
-      "initialJavaScriptGzip": 86699,
-      "cssGzip": 6028,
+      "initialJavaScriptGzip": 86522,
+      "cssGzip": 6025,
       "selectedImageBytes": 44416,
-      "estimatedInitialTransferBytes": 200953,
+      "estimatedInitialTransferBytes": 200783,
       "failures": []
     },
     {
       "lang": "ar",
       "width": 375,
-      "initialJavaScriptGzip": 86699,
-      "cssGzip": 6028,
+      "initialJavaScriptGzip": 86522,
+      "cssGzip": 6025,
       "selectedImageBytes": 19708,
-      "estimatedInitialTransferBytes": 185660,
+      "estimatedInitialTransferBytes": 185412,
       "failures": []
     },
     {
       "lang": "ar",
       "width": 1440,
-      "initialJavaScriptGzip": 86699,
-      "cssGzip": 6028,
+      "initialJavaScriptGzip": 86522,
+      "cssGzip": 6025,
       "selectedImageBytes": 44416,
-      "estimatedInitialTransferBytes": 230442,
+      "estimatedInitialTransferBytes": 230194,
       "failures": []
     }
   ]

@@ -57,8 +57,7 @@
     "intro": "A client storefront, a simulated bank, an ordering API, and where I started.",
     "details": "Project details",
     "live": "Visit storefront",
-    "demo": "Open demo",
-    "protected": "Vercel sign-in required",
+    "demo": "Try the live demo",
     "source": "View source",
     "items": [
       {
@@ -275,7 +274,7 @@
         "detail": "This simulated application holds no real deposits. Amounts use integer minor units. Successful receipts are stored with customer-scoped request keys and checked on replay.",
         "facts": [
           "154 backend tests in the saved run on 17 Oct 2026; the historical suite has not been rerun here.",
-          "The hosted demo requires sign-in. The local walkthrough below uses fictional money."
+          "The public HTML demo opens without an account and uses fictional balances and recipients."
         ],
         "caseStudy": {
           "role": "I built the project, its money rules, access rules, and request recovery. I wrote checks for the API and browser logic.",
@@ -490,7 +489,8 @@
       "Delivered"
     ],
     "cancel": "Cancelled — only while pending",
-    "fullCaseStudy": "Full case study (English)"
+    "fullCaseStudy": "Full case study (English)",
+    "publicDemo": "No account needed · fictional data"
   },
   "demo": {
     "eyebrow": "ONE REQUEST. ONE CHANGE.",
